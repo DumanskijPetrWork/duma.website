@@ -1,3 +1,5 @@
+import { MAGNETIC_CONFIG } from '@/shared/configs/magnetic.config';
+import { throttle } from '@/shared/lib/utils';
 import { MutableRefObject, useCallback, useRef, useState } from 'react';
 
 export function useMagnetic() {
@@ -5,7 +7,7 @@ export function useMagnetic() {
 	const [position, setPosition] = useState({ x: 0, y: 0 });
 
 	const handleMouse = useCallback(
-		(e: React.MouseEvent) => {
+		throttle((e: React.MouseEvent) => {
 			const { clientX, clientY } = e;
 			const { height, width, left, top } =
 				ref.current.getBoundingClientRect();
@@ -13,7 +15,7 @@ export function useMagnetic() {
 			const middleY = clientY - (top + height / 2);
 
 			setPosition({ x: middleX * 0.1, y: middleY * 0.1 });
-		},
+		}, MAGNETIC_CONFIG.throttleTimeout),
 		[ref]
 	);
 

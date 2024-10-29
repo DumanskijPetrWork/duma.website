@@ -1,5 +1,6 @@
 'use client';
 
+import { MAGNETIC_CONFIG } from '@/shared/configs/magnetic.config';
 import { motion } from 'framer-motion';
 import { ReactNode } from 'react';
 import styles from './styles.module.scss';
@@ -21,12 +22,7 @@ export function Magnetic({
 			onMouseMove={handleMouse}
 			onMouseLeave={resetPosition}
 			animate={position}
-			transition={{
-				type: 'spring',
-				stiffness: 350,
-				damping: 5,
-				mass: 0.5,
-			}}
+			transition={MAGNETIC_CONFIG.transition}
 		>
 			{children}
 		</motion.div>

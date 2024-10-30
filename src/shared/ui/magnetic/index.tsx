@@ -1,8 +1,8 @@
 'use client';
 
-import { MAGNETIC_CONFIG } from '@/shared/configs/magnetic.config';
 import { motion } from 'framer-motion';
 import { ReactNode } from 'react';
+import { MAGNETIC_CONFIG } from './magnetic.config';
 import styles from './styles.module.scss';
 import { useMagnetic } from './useMagnetic';
 

@@ -1,6 +1,6 @@
-import { MAGNETIC_CONFIG } from '@/shared/configs/magnetic.config';
 import { throttle } from '@/shared/lib/utils';
 import { MutableRefObject, useCallback, useRef, useState } from 'react';
+import { MAGNETIC_CONFIG } from './magnetic.config';
 
 export function useMagnetic() {
 	const ref = useRef() as MutableRefObject<HTMLDivElement>;

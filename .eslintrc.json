@@ -1,0 +1,24 @@
+{
+	"extends": ["next/core-web-vitals", "next/typescript"],
+	"rules": {
+		"no-restricted-imports": [
+			"error",
+			{
+				"name": "next/link",
+				"importNames": ["default"],
+				"message": "Please import from `@/features/i18n` instead."
+			},
+			{
+				"name": "next/navigation",
+				"importNames": [
+					"redirect",
+					"permanentRedirect",
+					"useRouter",
+					"usePathname"
+				],
+				"message": "Please import from `@/features/i18n` instead."
+			}
+		],
+		"react/jsx-no-literals": "error"
+	}
+}

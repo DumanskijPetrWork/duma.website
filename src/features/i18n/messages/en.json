@@ -1,0 +1,21 @@
+{
+	"header": {},
+	"footer": {},
+	"navbar": {
+		"navlinks": {
+			"Home": "Home",
+			"About": "About",
+			"Works": "Works",
+			"Contact": "Contact"
+		}
+	},
+	"home": {
+		"welcome": {
+			"headers": {
+				"top-left": ["I create", "websites"],
+				"right-bottom": ["That", "make", "you money"]
+			},
+			"cta": "Get a month of free service as a gift by taking a short two minute survey"
+		}
+	}
+}
